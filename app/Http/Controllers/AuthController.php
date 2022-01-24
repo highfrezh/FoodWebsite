@@ -112,9 +112,4 @@ class AuthController extends Controller
             'code'    => 200
         ]);
     }
-
-    public function changeUserPassword(Request $request)
-    {
-        // I we use you later possibly
-    }
 }

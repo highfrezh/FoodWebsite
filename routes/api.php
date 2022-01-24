@@ -20,6 +20,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/profile', [AuthController::class, 'profile']);
     Route::put('/editProfile/{id}', [AuthController::class, 'updateProfile']);
     Route::post('/profileImage', [AuthController::class, 'uploadProfileImage']);
+    Route::post('/changePwd', [AuthController::class, 'changeUserPassword']);
 });
 
 Route::get('{path}', [App\Http\Controllers\HomeController::class, 'index'])->where('path', '([A-z\d=\/_.]+)?');

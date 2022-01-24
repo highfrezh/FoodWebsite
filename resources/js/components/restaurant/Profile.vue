@@ -95,7 +95,7 @@
                 <div class="col-md-4">
                     <div class="p-3 py-5">
                         <div class="d-flex justify-content-between align-items-center experience">
-                            <span>Change password</span>
+                            <span>Reset your password</span>
                             <span class="border px-3 p-1 add-experience">
                                 <i class="fa fa-plus"></i>
                                 &nbsp;
@@ -105,18 +105,12 @@
                         <form action="#">
                             <div class="col-md-12">
                                 <label class="labels">
-                                    Old Password
+                                    Email 
                                 </label>
-                                <input type="text" class="form-control" v-model="pwdChange.oldPwd"  placeholder="Old password">
-                            </div> 
-                            <div class="col-md-12">
-                                <label class="labels">
-                                    New Password
-                                </label>
-                                <input type="text" v-model="pwdChange.newPwd" class="form-control" placeholder="new password">
+                                <input type="text" class="form-control" placeholder="email">
                             </div> 
                             <div class="mt-2 text-center">
-                                <button class="btn btn-primary profile-button" type="button">
+                                <button class="btn btn-primary profile-button" type="submit">
                                     Change
                                 </button>
                             </div>
@@ -236,8 +230,13 @@ export default {
             }
         },
 
-        uploadImage(){
-            Api().post('/profileImage',{image : this.form.image});
+        // uploadImage(){
+        //     Api().post('/profileImage',{image : this.form.image});
+        // },
+
+        changePwd(){
+            Api().post('/changePwd', this.pwdChange);
+
         }
 
     },

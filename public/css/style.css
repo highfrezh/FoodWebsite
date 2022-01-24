@@ -832,9 +832,9 @@ header .icons a .cart-no {
 /* media queries */
 
 @media (max-width: 991px) {
-    html {
+    /* html {
         font-size: 55%;
-    }
+    } */
 
     header {
         padding: 1rem 2rem;
@@ -880,7 +880,7 @@ header .icons a .cart-no {
     }
 
     .home .home-slider .slide .content h3 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .register form .inputBox .input .num-input {
@@ -889,10 +889,6 @@ header .icons a .cart-no {
 }
 
 @media (max-width: 450px) {
-    html {
-        font-size: 100%;
-    }
-
     .dishes .box-container .box img {
         height: auto;
         width: 100%;
@@ -903,16 +899,3 @@ header .icons a .cart-no {
     }
 }
 /* end of media query */
-
-/* intlTelInput */
-.iti__flag {
-    /* background-image: url("/public/img/flags.png"); */
-    background-image: url("/public/intl-tel-input/img/flags.png");
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .iti__flag {
-        background-image: url("/public/intl-tel-input/img/flags@2x.png");
-        /* background-image: url("/public/img/flags@2x.png"); */
-    }
-}
